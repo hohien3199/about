@@ -1,0 +1,246 @@
+:root {
+    --primary-color: #083170;
+}
+
+html {
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(./img/bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 70rem;
+    min-width: 70rem;
+    height: 100%;
+    margin: auto;
+    display: flex;
+}
+
+.profile-card {
+    width: inherit;
+    height: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.678);
+    border-radius: 2rem;
+    padding: 5rem;
+    box-shadow: 1px 15px 45px -5px rgba(0, 0, 0, 0.51);
+}
+
+.avt {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    background-size: 200% 200%;
+    background: linear-gradient(60deg,
+            #f79533,
+            #f37055,
+            #ef4e7b,
+            #a166ab,
+            #5073b8,
+            #1098ad,
+            #07b39b,
+            #6fba82);
+    animation: animate 2s ease alternate infinite;
+    background-size: 300% 300%;
+    box-shadow: 1px 15px 33px -10px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: 1px 15px 33px -10px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 1px 15px 33px -10px rgba(0, 0, 0, 0.51);
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.avt img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin: 1rem;
+}
+
+.desc {
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.sm-ico {
+    height: auto;
+    text-align: center;
+    font-size: 3rem;
+    margin: 1rem 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sm-ico a {
+    display: inline-block;
+    transition: all .2s linear;
+}
+
+.sm-ico a:hover {
+    transform: scale(1.3);
+}
+
+.sm-ico a:hover i {
+    color: rgb(35, 102, 203);
+}
+
+.sm-ico i {
+    color: var(--primary-color);
+    margin: 1rem 1rem;
+}
+
+.sm-content {
+    width: 90%;
+    height: auto;
+}
+
+.sm-item {
+    width: 100%;
+    height: 6rem;
+    border-radius: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(8, 49, 112);
+    box-shadow: 0px 2px 8px 0px rgba(8, 50, 112, 0.24);
+    -webkit-box-shadow: 0px 2px 8px 0px rgba(8, 50, 112, 0.24);
+    -moz-box-shadow: 0px 2px 8px 0px rgba(8, 50, 112, 0.24);
+    transition: transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
+}
+
+
+.sm-item:not(:first-child):not(:last-child) {
+    margin: 2rem 0;
+}
+
+.sm-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 2px 8px 0px rgba(8, 50, 112, 0.5);
+    -webkit-box-shadow: 0px 2px 8px 0px rgba(8, 50, 112, 0.5);
+    -moz-box-shadow: 0px 2px 8px 0px rgba(8, 50, 112, 0.5);
+}
+
+.sm-item a {
+    color: var(--primary-color);
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 0 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sm-item svg {
+    fill: var(--primary-color);
+    font-size: 4rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    text-align: center;
+}
+
+.sm-item p {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    margin-right: 4rem;
+}
+
+@media (max-width:768px) {
+    .wrapper {
+        width: 100%;
+        min-width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+
+    .profile-card {
+        padding: 0;
+        margin: 6rem 2rem;
+        background: transparent;
+        box-shadow: none;
+        height: 100%;
+        justify-content: unset;
+    }
+
+    .avt {
+        width: 9rem;
+        height: 9rem;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .name {
+        font-size: 2.4rem;
+    }
+
+    .desc {
+        font-size: 1.5rem;
+    }
+
+    .sm-content {
+        width: 100%;
+        height: auto;
+    }
+
+    .sm-item {
+        height: 5.5rem;
+    }
+
+    .sm-item:last-child {
+        margin-bottom: 5rem;
+    }
+
+    .sm-item p {
+        font-size: 1.5rem;
+    }
+}
